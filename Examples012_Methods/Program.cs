@@ -51,3 +51,28 @@ string Method4(int count, string c)
 
 string res = Method4(10, "asdf");
 Console.WriteLine(res);
+
+// Цикл for
+// for (int i = 0; i < count; i++)
+// {
+//     result = result + text;
+// }
+// return result
+
+int[] arr = {1, 2, 3, 5, 2, 9, 4};
+
+void SelectionSort(int[] array)
+{
+    for (int i = 0; i < array.Length - 1; i++)
+    {
+
+    int minPosition = i;
+    for (int j = i + 1; j < array.Length; j++)
+    {
+        if (array[j] < array[minPosition]) minPosition = j;
+    }
+    int temporary = array[i];
+    array[i] = array[minPosition];
+    array[minPosition] = temporary;
+    }
+}
